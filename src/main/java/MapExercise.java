@@ -27,7 +27,8 @@ public class MapExercise {
      * so here Integer is a wrapper for int.
      */
     public Map<Integer, String> createMap(){
-        return null;
+        HashMap<Integer, String> hm = new HashMap<Integer, String>();
+        return hm;
     }
 
     /**
@@ -37,7 +38,7 @@ public class MapExercise {
      */
     public int getSize(Map<Integer,String> map){
 //        return total number of key/value pairs in the map
-        return 0;
+        return map.size();
     }
 
     /**
@@ -48,6 +49,7 @@ public class MapExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addKeyValuePair(Map<Integer,String> map, int key, String value){
+        map.put(key,value);
     }
 
     /**
@@ -57,7 +59,8 @@ public class MapExercise {
      * @return the value associated with key in map.
      */
     public String getValueFromKey(Map<Integer, String> map, int key){
-        return "";
+
+        return map.get(key);
     }
 
     /**
@@ -67,6 +70,7 @@ public class MapExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeKeyValuePair(Map<Integer, String> map, int key){
+        map.remove(key);
     }
 
     /**
@@ -77,6 +81,7 @@ public class MapExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void overwriteValue(Map<Integer, String> map, int key, String value){
+        map.replace(key,value);
 
     }
 }
